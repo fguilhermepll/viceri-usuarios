@@ -67,11 +67,11 @@ namespace Viceri_Controle_Usuarios.Controllers
 
             if (checarUsuarioEmail != null)
             {
-                return BadRequest("Email já cadastrado.");
+                return BadRequest(new Mensagem { StatusCode = 400, MensagemTexto = "Email já cadastrado." });
 
             } else if (checarUsuarioCpf != null)
             {
-                return BadRequest("CPF já cadastrado.");
+                return BadRequest(new Mensagem { StatusCode = 400, MensagemTexto = "CPF já cadastrado." });
             }
 
             usuario.Senha = Hashing.HashPassword(usuario.Senha);
