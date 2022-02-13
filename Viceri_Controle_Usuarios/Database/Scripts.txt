@@ -1,5 +1,17 @@
-﻿INSERT INTO [Usuarios] ([Cpf], [DataNasc], [Email], [Nome], [Senha])
-      VALUES (@p0, @p1, @p2, @p3, @p4);
+INSERT INTO [Usuarios] ([Cpf], [DataNasc], [Email], [Nome], [Senha])
+      VALUES ("123", "10/01/1982", "teste@email.com", "Fulano", "123456");
+      SELECT [Id]
+      FROM [Usuarios]
+      WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+
+INSERT INTO [Usuarios] ([Cpf], [DataNasc], [Email], [Nome], [Senha])
+      VALUES ('444', '03/01/2000', 'teste2@email.com', 'Ciclano', '123456');
+      SELECT [Id]
+      FROM [Usuarios]
+      WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+
+INSERT INTO [Usuarios] ([Cpf], [DataNasc], [Email], [Nome], [Senha])
+      VALUES ('123', '22/11/1990', 'teste3@email.com', 'Beltrano', '123456');
       SELECT [Id]
       FROM [Usuarios]
       WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
@@ -11,12 +23,12 @@ SELECT [u].[Id], [u].[Cpf], [u].[DataNasc], [u].[Email], [u].[Nome], [u].[Senha]
 
 SELECT TOP(1) [u].[Id], [u].[Cpf], [u].[DataNasc], [u].[Email], [u].[Nome], [u].[Senha]
       FROM [Usuarios] AS [u]
-      WHERE [u].[Id] = @__p_0
+      WHERE [u].[Id] = 1
 
-UPDATE [Usuarios] SET [Cpf] = @p0, [DataNasc] = @p1, [Email] = @p2, [Senha] = @p3
-      WHERE [Id] = @p4;
+UPDATE [Usuarios] SET [Cpf] = 123, [DataNasc] ='03/01/2022', [Email] = 'teste4@email.com', [Senha] ='123456'
+      WHERE [Id] = 1;
       SELECT @@ROWCOUNT;
 
 DELETE FROM [Usuarios]
-      WHERE [Id] = @p0;
+      WHERE [Id] = 1;
       SELECT @@ROWCOUNT;
