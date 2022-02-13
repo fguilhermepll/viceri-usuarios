@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Viceri_Controle_Usuarios</name>
+    </assembly>
+    <members>
+        <member name="M:Viceri_Controle_Usuarios.Controllers.UsuarioController.Get">
+            <summary>
+            Endpoint para pesquisar todos os usuarios cadastrados.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Viceri_Controle_Usuarios.Controllers.UsuarioController.Get(System.Int32)">
+            <summary>
+            Endpoint para procurar um usuario pelo ID
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Viceri_Controle_Usuarios.Controllers.UsuarioController.AddUsuario(Viceri_Controle_Usuarios.Models.Usuario)">
+            <summary>
+            Endpoint para cadastrar um usuario.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Viceri_Controle_Usuarios.Controllers.UsuarioController.UpdateUsuario(Viceri_Controle_Usuarios.Models.Usuario)">
+            <summary>
+            Endpoint para alterar um usuario pelo ID.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Viceri_Controle_Usuarios.Controllers.UsuarioController.DeleteUsuario(System.Int32)">
+            <summary>
+            Deleta um usuario. Recebendo seu Id como parâmetro
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
